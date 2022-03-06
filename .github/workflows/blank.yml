@@ -14,8 +14,8 @@ jobs:
         environment: 'AzureChinaCloud'
     - uses: Azure/get-keyvault-secrets@v1
       with: 
-        keyvault: "ywttestsf"
-        secrets: 'ywttest, test00'
+        keyvault: "wingtiptoyskeyvault"
+        secrets: 'ywttest, test05'
       id: myGetSecretAction
     - run: |
         echo ${{steps.myGetSecretAction.outputs.ywttest}}
