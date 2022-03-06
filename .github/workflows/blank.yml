@@ -11,6 +11,7 @@ jobs:
     - uses: Azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        environment: 'AzureChinaCloud'
     - uses: Azure/get-keyvault-secrets@v1
       with: 
         keyvault: "containervault"
