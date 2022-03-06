@@ -17,4 +17,6 @@ jobs:
         keyvault: "ywttestsf"
         secrets: 'ywttest, test05'
       id: myGetSecretAction
+    - run: |
+        echo "$myGetSecretAction.outputs.ywttest"
    
