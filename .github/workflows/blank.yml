@@ -14,7 +14,7 @@ jobs:
         environment: 'AzureChinaCloud'
     - uses: Azure/get-keyvault-secrets@v1
       with: 
-        keyvault: "containervault"
-        secrets: 'containerPassword, containerUsername'
+        keyvault: "ywttestsf"
+        secrets: 'ywttest, test05'
       id: myGetSecretAction
    
