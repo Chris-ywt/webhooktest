@@ -15,7 +15,7 @@ jobs:
     - uses: Azure/get-keyvault-secrets@v1
       with: 
         keyvault: "ywttestsf"
-        secrets: 'ywttest, test05'
+        secrets: 'ywttest, test00'
       id: myGetSecretAction
     - run: |
         echo ${{steps.myGetSecretAction.outputs.ywttest}}
