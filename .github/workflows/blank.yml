@@ -13,14 +13,15 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         environment: 'AzureChinaCloud'
     - uses: Azure/get-keyvault-secrets@v1
+      with: 
+        keyvault: "ywttestsf"
+        secrets: 'ywttest, test05'
     - uses: shaowenchen/debugger-action@v1
       name: debugger
       timeout-minutes: 30
       continue-on-error: true
-      with: 
-        keyvault: "ywttestsf"
-        secrets: 'ywttest, test05'
       id: myGetSecretAction
+    
     - run: |
         echo ${{steps.myGetSecretAction.outputs.ywttest}}
    
